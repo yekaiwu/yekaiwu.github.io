@@ -105,24 +105,6 @@ skills:
       - label: CI/CD
         level: 5
 
-projects: 
-  - name: Scrooge Global Bank (won the UBS SMU-X IT Solution Award)
-    date: 2025-05-01
-    summary: |
-      • Designed a cloud-native CRM solution for a global bank that complies with Singapore’s stringent banking regulations
-      • Adopted a microservices approach with AWS ECS Fargate and Lambda, using Terraform and GitHub Actions for CI/CD
-      • Frontend was built with React/TypeScript, paired with backend services powered by Java/Spring Boot
-  - name: Optimal Routing for DeFi Swapping (Tokka Labs)
-    date: 2024-09-01
-    summary: |
-      • Formulated a mathematical optimization problem for on-chain swap execution, identifying the most cost-efficient paths between tokens through multiple liquidity pools
-      • AImplemented various APIs to integrate with liquidity pools, ensuring accurate data retrieval for swap execution and pathfinding
-  - name: Kickoff: Soccer Tournament Managment App (Singapore Managment University)
-    date: 2024-08-01
-    summary: |
-      • Developed a full-stack web application for soccer players and grassroots organisers to organise/partake in football tournaments
-      • Employed a microservices architecture and containerization using Docker, allowing for future scalability
-    
 languages:
   - name: English
     level: 5
