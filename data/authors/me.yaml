@@ -2,77 +2,90 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Alex Johnson
-  given: Alex
-  family: Johnson
+  display: Wu Yekai
+  given: Yekai
+  family: Wu
 postnominals: []
 status:
   icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: Full-Stack Developer
-email: alex@example.com
+role: AI Researcher
+email: wuyekai.sg@gmail.com
 bio: |
-  Full-stack developer with 5+ years of experience building scalable web applications.
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
+  I am actively working with and exploring Vision-Language Models (VLMs), Large Language Models (LLMs), and agentic AI systems, with a particular interest in multimodal reasoning, autonomous decision-making, and system-level integration.
 
 affiliations:
-  - name: Tech Corp
-    url: https://techcorp.example.com
+  - name: Singapore Management University
+    url: 
 
 links:
   - icon: at-symbol
-    url: mailto:alex@example.com
+    url: mailto:wuyekai.sg@gmail.com
     label: E-mail Me
   - icon: brands/github
-    url: https://github.com/alexjohnson
+    url: https://github.com/wuyekai
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnson/
+    url: https://www.linkedin.com/in/yekaiwu/
   - icon: brands/x
-    url: https://x.com/alexjohnson
+    url: https://x.com/wuyekai
 
 interests:
-  - Web Development
-  - Cloud Architecture
-  - Open Source
-  - Developer Experience
+  - AI Research
+  - Vision-Language Models
+  - Large Language Models
+  - Agentic AI
+  - Multimodal Reasoning
+  - Autonomous Decision-Making
+  - System-Level Integration
 
 education:
   - degree: B.S. Computer Science
-    institution: State University
-    start: 2015-09-01
-    end: 2019-05-31
+    institution: Singapore Management University
+    start: 2023-08-01
+    end: 2027-05-31
     summary: |
       Focus on software engineering and distributed systems.
-      Senior project on distributed caching systems.
     button:
       text: View Project
       url: https://github.com/alexjohnson/senior-project
       icon: brands/github
 
 experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
+  - role: Agent Development Intern
+    org: Wrtn Technologies, Seoul - South Korea
+    start: 2025-05-01
+    end: 2025-08-31
+    summary: |
+      • Enhanced LLM response by refining retrieval mechanisms and context management for greater accuracy
+      • Created the Memory system, Search system, and Self-reflection system for a B2B Agent Experience tool
+      • Optimized multi-agent collaboration and interaction frameworks to enhance system efficiency and scalability
+  - role: Cross Border Acceleration Intern
+    org: XNode, Shanghai - China
+    start: 2024-05-01
+    end: 2024-08-31
+    summary: |
+      • Conducted desk research on cross-border acceleration programs across China, Singapore, Germany, and the U.A.E
+      • Managed internal databases of startups, founders, and venture capital firms, reducing querying time by 20%
+      • Attended key conferences in Shanghai and Suzhou, managed client relationships, acquisition and outreach efforts
+  - role: Research Intern
+    org: WorldQuant
     start: 2023-01-01
+    end: 2023-07-01
     summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
-    org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
-    summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
-    summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+      • Automated identification and analysis of quantitative alpha signals, increasing research efficiency by 40%
+      • Developed robust backtesting frameworks for alphas, improving accuracy, Sharpe ratio, and reducing self-correlation in strategies
+      • Analyzed and labeled proprietary datasets, streamlining data usability and enabling more effective alpha discovery for WorldQuant
 
 skills:
+  - name: Artificial Intelligence
+    items:
+      - label: Agentic AI
+        level: 5
+      - label: Computer Vision
+        level: 5
+      - label: Image Generation
+        level: 5
+      - label: Large Language Models
+        level: 5
   - name: Development
     items:
       - label: TypeScript
@@ -82,19 +95,38 @@ skills:
       - label: Node.js
         level: 5
       - label: Python
-        level: 4
+        level: 5
   - name: DevOps
     items:
       - label: Docker
-        level: 4
+        level: 5
       - label: AWS
-        level: 4
+        level: 5
       - label: CI/CD
         level: 5
 
+projects: 
+  - name: Scrooge Global Bank (won the UBS SMU-X IT Solution Award)
+    date: 2025-05-01
+    summary: |
+      • Designed a cloud-native CRM solution for a global bank that complies with Singapore’s stringent banking regulations
+      • Adopted a microservices approach with AWS ECS Fargate and Lambda, using Terraform and GitHub Actions for CI/CD
+      • Frontend was built with React/TypeScript, paired with backend services powered by Java/Spring Boot
+  - name: Optimal Routing for DeFi Swapping (Tokka Labs)
+    date: 2024-09-01
+    summary: |
+      • Formulated a mathematical optimization problem for on-chain swap execution, identifying the most cost-efficient paths between tokens through multiple liquidity pools
+      • AImplemented various APIs to integrate with liquidity pools, ensuring accurate data retrieval for swap execution and pathfinding
+- name: Kickoff: Soccer Tournament Managment App (Singapore Managment University)
+    date: 2024-08-01
+    summary: |
+      • Developed a full-stack web application for soccer players and grassroots organisers to organise/partake in football tournaments
+      • Employed a microservices architecture and containerization using Docker, allowing for future scalability
+    
 languages:
   - name: English
     level: 5
     label: Native
-
-awards: []
+  - name: Chinese
+    level: 5
+    label: Fluent
