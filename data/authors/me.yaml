@@ -117,7 +117,7 @@ projects:
     summary: |
       • Formulated a mathematical optimization problem for on-chain swap execution, identifying the most cost-efficient paths between tokens through multiple liquidity pools
       • AImplemented various APIs to integrate with liquidity pools, ensuring accurate data retrieval for swap execution and pathfinding
-- name: Kickoff: Soccer Tournament Managment App (Singapore Managment University)
+  - name: Kickoff: Soccer Tournament Managment App (Singapore Managment University)
     date: 2024-08-01
     summary: |
       • Developed a full-stack web application for soccer players and grassroots organisers to organise/partake in football tournaments
