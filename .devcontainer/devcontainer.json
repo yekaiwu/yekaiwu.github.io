@@ -10,9 +10,6 @@
       ]
     }
   },
-  "mounts": [
-    "source=pnpm-store,target=/home/vscode/.local/share/pnpm,type=volume"
-  ],
   "remoteUser": "vscode",
   "forwardPorts": [
     1313
