@@ -13,18 +13,18 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Your Name"
+    name: "Yekai"
     # Legal entity for copyright notices (defaults to name if not set)
-    organization: ""
+    organization: "Singapore Management University"
     # Schema.org type for structured data
     type: person                        # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "Full-Stack Developer"
+    tagline: "AI Researcher | Multimodal"
     # Site meta description for search engines and social sharing
-    description: "Modern developer portfolio showcasing web development projects, technical blog posts, and open source contributions. Built with Hugo Blox."
+    description: "I am actively working with and exploring Vision-Language Models (VLMs), Large Language Models (LLMs), and agentic AI systems, with a particular interest in multimodal reasoning, autonomous decision-making, and system-level integration."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
-      twitter: "yourusername"              # Twitter/X handle for Twitter Cards (without @)
+      twitter: "yekaiwu"              # Twitter/X handle for Twitter Cards (without @)
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -116,7 +116,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: "© 2026 - Yekai. This work is licensed under {license}"
     license:
       type: cc                          # cc | custom
       allow_derivatives: false
