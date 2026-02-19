@@ -20,9 +20,6 @@ links:
   - type: github
     url: https://github.com/yekaiwu/Chess_Coach
     label: Code
-  - type: live
-    url: https://github.com/yekaiwu/Chess_Coach
-    label: View
 featured: true
 status: "Live"
 role: "Solo Developer"
