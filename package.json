@@ -1,12 +1,12 @@
 {
-  "name": "hugo-blox-dev-portfolio-free",
+  "name": "yekaiwu-portfolio",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@10.14.0",
-  "description": "Modern developer portfolio template for Hugo Blox with Tailwind CSS v4 - Free version",
+  "description": "Wu Yekai's engineering portfolio, built with Hugo.",
   "scripts": {
     "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify && pnpm run pagefind",
+    "build": "hugo --cleanDestinationDir --minify && pnpm run pagefind",
     "pagefind": "pagefind --site public"
   },
   "dependencies": {

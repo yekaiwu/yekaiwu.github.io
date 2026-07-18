@@ -1,0 +1,269 @@
+{{- $style := resources.Get "css/portfolio.css" | minify | fingerprint -}}
+{{- $portrait := resources.Get "media/authors/me.png" -}}
+{{- $chess := resources.Get "media/projects/chess-coach.png" -}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wu Yekai — software engineer building agentic products, decision systems, and data-rich tools.">
+    <meta name="theme-color" content="#0b1220">
+    <title>Wu Yekai — Software Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="#top" aria-label="Wu Yekai home">WY<span>·</span>Systems</a>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#case-studies">Case studies</a>
+          <a href="#skills">Capabilities</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="header-cta" href="/uploads/resume.pdf" target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main" data-pagefind-body>
+      <section class="hero section" id="top">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Wu Yekai · Software engineer · Singapore</p>
+            <h1>Building reliable systems where <em>reasoning</em> meets product.</h1>
+            <p class="hero-summary">I design agentic products, calibrated decision engines, and data-rich tools—from system boundaries and APIs to tested workflows and usable interfaces.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+              <a class="button button-secondary" href="mailto:wuyekai.sg@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-links" aria-label="Professional links">
+              <a href="https://github.com/yekaiwu" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://www.linkedin.com/in/yekaiwu/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <a href="/uploads/resume.pdf" target="_blank" rel="noreferrer">Download résumé <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Engineering focus">
+            {{ with $portrait }}<img class="portrait" src="{{ .RelPermalink }}" width="112" height="112" alt="Wu Yekai">{{ end }}
+            <div class="focus-intro">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Project-led portfolio</span>
+            </div>
+            <p>I care about the difficult middle: turning a promising model or integration into a system with guardrails, observability, tests, and a clear operator experience.</p>
+            <ul class="focus-list">
+              <li><span>01</span> Agent workflows &amp; tool boundaries</li>
+              <li><span>02</span> Forecasting, routing &amp; quantitative logic</li>
+              <li><span>03</span> Full-stack delivery &amp; operational UX</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="proof-band" aria-label="Portfolio themes">
+        <div class="shell proof-grid">
+          <div><span>01</span><strong>AI systems</strong><p>Versioned workflows, tool calls, LLM orchestration, deterministic fallbacks.</p></div>
+          <div><span>02</span><strong>Decision systems</strong><p>Calibration, backtests, risk gates, market data, and explainable outputs.</p></div>
+          <div><span>03</span><strong>Product systems</strong><p>Interfaces, APIs, persistence, automation, and reproducible developer setup.</p></div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Selected work</p>
+              <h2>Systems with meaningful engineering depth.</h2>
+            </div>
+            <p>These projects are prioritized for technical complexity, system design, evidence of validation, and relevance to product-facing engineering teams.</p>
+          </div>
+
+          <div class="featured-grid">
+            <article class="featured-card featured-card-wide" id="realtor-os">
+              <div class="card-topline"><span class="project-number">01</span><span class="project-state">Configured agent runtime</span></div>
+              <div class="featured-content">
+                <div>
+                  <h3>Realtor OS</h3>
+                  <p class="project-lede">A lead-engagement operating desk for property agents: inbound WhatsApp and voice leads, assistant-led qualification, bookings, tasks, inventory, cost visibility, and CRM sync.</p>
+                  <div class="tag-list"><span>Next.js</span><span>Vercel AI SDK</span><span>OpenRouter</span><span>Twilio</span><span>Postgres</span><span>Twenty CRM</span></div>
+                  <a class="text-link" href="#case-realtor">Read the case study <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="system-visual realtor-visual" aria-label="Configured workflow architecture">
+                  <div class="visual-label">One workflow definition, multiple runtime targets</div>
+                  <div class="visual-pipeline">
+                    <span>Workflow<br>version</span><i aria-hidden="true">→</i><span>Prompt +<br>tools</span><i aria-hidden="true">→</i><span>WhatsApp<br>or voice</span>
+                  </div>
+                  <div class="visual-foot"><b>Thread pins versions</b><span>•</span> audit + cost events <span>•</span> human takeover</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-card jump-card">
+              <div class="card-topline"><span class="project-number">02</span><span class="project-state">Forecasting engine</span></div>
+              <h3>Jump Cup</h3>
+              <p class="project-lede">A multi-model probability engine for World Cup markets, designed around calibration rather than overconfident winner picks.</p>
+              <div class="system-visual forecast-visual" aria-label="Forecasting pipeline">
+                <span>Question</span><i aria-hidden="true">↓</i><span>Parse</span><i aria-hidden="true">↓</i><span>Route + ensemble</span><i aria-hidden="true">↓</i><span>Calibrate + trace</span>
+              </div>
+              <div class="tag-list"><span>Python</span><span>scikit-learn</span><span>OpenRouter</span><span>SQLite</span></div>
+              <a class="text-link" href="#case-jump">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="featured-card money-card">
+              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Quant decision support</span></div>
+              <h3>Money Money</h3>
+              <p class="project-lede">A personal research and portfolio platform that turns multiple strategy signals into explained, risk-aware actions.</p>
+              <div class="system-visual money-visual" aria-label="Investment decision flow">
+                <div><b>Strategies</b><span>facts + flags</span></div><i aria-hidden="true">→</i><div><b>Portfolio</b><span>aggregate</span></div><i aria-hidden="true">→</i><div><b>Risk</b><span>regime + sizing</span></div>
+              </div>
+              <div class="tag-list"><span>Python</span><span>FastAPI</span><span>pandas</span><span>HTMX</span></div>
+              <a class="text-link" href="#case-money">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="featured-card chess-card">
+              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Full-stack AI application</span></div>
+              <div class="chess-layout">
+                <div>
+                  <h3>Chess Coach</h3>
+                  <p class="project-lede">Engine-backed analysis translated into contextual chess coaching, commentary, tactics, and chat.</p>
+                  <div class="tag-list"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>Stockfish</span><span>LangChain</span></div>
+                  <a class="text-link" href="https://github.com/yekaiwu/Chess_Coach" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                </div>
+                {{ with $chess }}<img class="chess-image" src="{{ .RelPermalink }}" width="2078" height="1502" alt="Chess Coach analysis interface with game board and evaluation panel">{{ end }}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-section" id="case-studies">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">Case studies</p>
+            <h2>How the systems are engineered.</h2>
+            <p>Each summary separates implemented behavior from intended future work and calls out the validation evidence that exists in the repository.</p>
+          </div>
+
+          <article class="case-study" id="case-realtor">
+            <div class="case-index">01</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">Realtor OS · agentic lead operations</p><h3>Make assistant behavior configurable without making active conversations unpredictable.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>Property agents need a single operating desk for inbound leads, qualification, bookings, follow-ups, inventory, and CRM records—while retaining control when a lead needs a human.</p></div>
+                <div><h4>System design</h4><p>A workflow definition, prompt template, and runtime variables compile to a system prompt plus tools. Threads pin their workflow and prompt versions, so a configuration edit does not change an in-flight conversation.</p></div>
+                <div><h4>Operational choices</h4><p>The runtime owns conversations, tool calls, costs, and audit data; Twenty holds durable CRM records. It runs with local JSON when no database is configured and uses deterministic adapters when SaaS credentials are absent.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Evidence in the repository</strong><span>Next.js + Zod contracts, Twilio and voice webhooks, Cal.com and Twenty boundaries, typed tool paths, Vitest coverage, smoke/readiness/route scripts, and GitHub Actions for typecheck + tests.</span></div>
+              <p class="case-note"><b>Status:</b> The documented local demo/runtime path works without external credentials. A public source link needs confirmation because this checkout’s Git remote is owned by a different account.</p>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-jump">
+            <div class="case-index">02</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">Jump Cup · calibrated forecasting</p><h3>Forecast probabilities that can be inspected, calibrated, and safely revised.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>Probability contests reward estimates that are correct at their stated confidence—not aggressive guesses. The system converts free-form market questions into structured prediction tasks.</p></div>
+                <div><h4>Pipeline</h4><p>An LLM/heuristic parser path classifies the question, routes it to suitable models, ensembles available signals, then applies subtype/family calibration, shrinkage toward a base rate, and probability clamping.</p></div>
+                <div><h4>Evaluation</h4><p>The dashboard exposes the parse path, data match, each model output, and exact pipeline math. The calibration gate compares engine and crowd Brier scores across 198 settled markets from 20 captured matches.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Quality bar</strong><span>The gate requires finite probabilities and encodes a defined crowd-relative Brier tolerance. The project documentation also names current model and data limitations rather than presenting a profitability claim.</span></div>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-money">
+            <div class="case-index">03</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">Money Money · research-to-action loop</p><h3>Keep the decision logic deterministic; use language models to explain it.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>A small, SGD-based retail portfolio needs multi-market research, position-aware recommendations, monitoring, and a way to understand why a decision changed.</p></div>
+                <div><h4>Decision architecture</h4><p>Strategies emit scores, structured rationale facts, and risk flags. The portfolio layer aggregates agreement, reconciles holdings and cash, then applies regime, correlation, volatility, and stop rules before producing an action.</p></div>
+                <div><h4>Product judgment</h4><p>The optional Gemini/LiteLLM layer renders plain-English explanations from facts already produced by the deterministic pipeline. Data is stored incrementally, and backtests are explicitly described as sanity checks rather than point-in-time proof.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Evidence in the repository</strong><span>Strategy, portfolio, monitoring, risk, target-price, efficacy, and dashboard tests; FastAPI/Jinja/HTMX local interface; launchd scheduling and Telegram alert hooks.</span></div>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-mrt">
+            <div class="case-index">04</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">MRT + Bus Router · multimodal optimisation</p><h3>Route “leave now” journeys while treating live data, schedule data, and API quotas differently.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>Singapore public-transit routing needs bus arrivals, rail topology and schedules, walking access/egress, transfer penalties, and a clear path to compare against Google transit results.</p></div>
+                <div><h4>Routing choices</h4><p>The router builds bus, rail, walking, and transfer candidates; takes live LTA arrival lookups only for realistic boarding stops; uses bounded OneMap pedestrian calls; and falls back conservatively for exploratory edges and timeouts.</p></div>
+                <div><h4>Benchmark discipline</h4><p>A repeatable Google comparison is paced, retry-aware, and checkpointed. The source documents known GTFS incompleteness and limits of scheduled rail waits, avoiding unsupported production claims.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Recorded evidence</strong><span>Automated tests cover MRT-only, bus-only, mixed routing, topology loading, benchmark reporting, and rate-limit handling. One five-destination routing-fix snapshot records 4 wins, 1 tie, and 0 losses; the README explicitly says it is not a production win rate.</span></div>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-chess">
+            <div class="case-index">05</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">Chess Coach · engine-to-language interface</p><h3>Pair deterministic analysis with adaptive, context-aware explanation.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>Centipawn evaluations and move trees are useful to engines but opaque to learners. The product makes those signals navigable through evaluation, commentary, coach chat, and tactics views.</p></div>
+                <div><h4>System design</h4><p>FastAPI route modules and dependency-managed singleton analysers coordinate chess state, Stockfish, and LangChain/LiteLLM output. The React client keeps board and analysis state in typed components.</p></div>
+                <div><h4>Delivery evidence</h4><p>Docker setup, environment examples, health and API routes, backend/frontend/integration GitHub Actions, and a scheduled security scan provide a clearer path from prototype to operated application.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section other-section" id="other-work">
+        <div class="shell">
+          <div class="section-heading split-heading">
+            <div><p class="eyebrow">Other projects</p><h2>More ways I build.</h2></div>
+            <p>These are smaller, earlier-stage, or more specialised projects. They remain included because they show practical automation, frontend delivery, and disciplined decision-system design.</p>
+          </div>
+          <div class="other-grid">
+            <article><span>Quant research</span><h3>WC26 Edge</h3><p>Market-first football decision support with de-vigging, Dixon-Coles pricing, CLV, and capped quarter-Kelly recommendations.</p><span class="quiet-link">Source link pending public availability</span></article>
+            <article id="job-app"><span>In progress · Phase 3</span><h3>Job Application Assistant</h3><p>Factual resume-bullet tailoring, public-ATS discovery connectors, PDF generation, and a cautious application-field router.</p><span class="quiet-link">Repository link to confirm</span></article>
+            <article><span>Full-stack product</span><h3>Bojio / Food Buddy</h3><p>Phone OTP, row-level security, meal workflows, restaurant parsing, and real-time chat in a mobile-first React app.</p><span class="quiet-link">Source link pending public availability</span></article>
+            <article><span>Browser automation</span><h3>NUS Tennis Booker</h3><p>Scheduled, time-critical Playwright booking with persistent sessions, pre-warmed browsers, health checks, and Telegram payment handoff.</p><span class="quiet-link">Source link pending public availability</span></article>
+            <article><span>Developer workflow</span><h3>Claude When</h3><p>A local TypeScript/Express control panel for daily Claude Code CLI scheduling via node-cron.</p><a href="https://github.com/yekaiwu/claude_when" target="_blank" rel="noreferrer">Repository ↗</a></article>
+            <article><span>Architecture in progress</span><h3>Liquidity</h3><p>A specification-led autonomous trading agent design with deterministic risk states and no LLM trading write tools.</p><span class="quiet-link">Source link pending public availability</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="shell skills-grid">
+          <div class="skills-intro"><p class="eyebrow">Capabilities</p><h2>Comfortable across the path from data to product.</h2><p>Tools are grouped by the systems they support, not by a self-reported proficiency scale.</p></div>
+          <dl class="skill-list">
+            <div><dt>AI &amp; agent systems</dt><dd>Vercel AI SDK, OpenRouter, LangChain, LiteLLM, structured output, tool orchestration, prompt/version management, evaluation gates</dd></div>
+            <div><dt>Backend &amp; APIs</dt><dd>Python, TypeScript, FastAPI, Next.js, Node.js, Express, REST, webhooks, Zod, Pydantic</dd></div>
+            <div><dt>Data &amp; quantitative</dt><dd>pandas, NumPy, SciPy, scikit-learn, Brier scoring, calibration, backtesting, market data, GTFS routing</dd></div>
+            <div><dt>Product &amp; delivery</dt><dd>React, Vite, Tailwind CSS, HTMX, Supabase, PostgreSQL, SQLite, Playwright, Docker, GitHub Actions</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section quality-section">
+        <div class="shell quality-grid">
+          <div><p class="eyebrow">How I build</p><h2>Evidence over vanity metrics.</h2></div>
+          <ul>
+            <li><b>Testable boundaries.</b> Risk logic, routing, normalisers, integrations, and application states are separated into units that can be tested with fixtures or deterministic fallbacks.</li>
+            <li><b>Inspectable decisions.</b> The forecasting engine exposes its prediction trace; research recommendations preserve facts and risk flags; agent workflows record versioning, tool calls, and audit context.</li>
+            <li><b>Honest constraints.</b> The portfolio calls out data gaps, evaluation scope, and status rather than converting partial benchmarks or planned work into claims.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="shell contact-card">
+          <div><p class="eyebrow">Let’s talk</p><h2>Looking for an engineer who can think in systems and ship in detail?</h2><p>Open to software engineering, AI engineering, data, quantitative, and product-focused technical conversations.</p></div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:wuyekai.sg@gmail.com">Email Yekai <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="/uploads/resume.pdf" target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://www.linkedin.com/in/yekaiwu/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="shell"><span>© {{ now.Year }} Wu Yekai</span><span>Built with Hugo · <a href="https://github.com/yekaiwu/yekaiwu.github.io" target="_blank" rel="noreferrer">Source ↗</a></span></div></footer>
+  </body>
+</html>
