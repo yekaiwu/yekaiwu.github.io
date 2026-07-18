@@ -111,19 +111,14 @@ img { max-width: 100%; display: block; }
 .text-link { color: var(--ink); font-size: .84rem; font-weight: 800; }
 .text-link:hover { color: var(--lime-dark); }
 
-.system-visual { border-radius: 12px; }
-.realtor-visual { padding: 21px; color: #eaf2f5; background: var(--navy); }
-.visual-label { color: #adc0ce; font-size: .7rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
-.visual-pipeline { display: grid; grid-template-columns: 1fr 22px 1fr 22px 1fr; gap: 7px; align-items: center; margin: 20px 0; }
-.visual-pipeline span { display: flex; min-height: 64px; align-items: center; justify-content: center; padding: 8px; color: #f1f7fa; border: 1px solid rgba(116, 173, 177, .45); border-radius: 8px; background: #172941; font-size: .75rem; font-weight: 720; line-height: 1.25; text-align: center; }
-.visual-pipeline i { color: var(--lime); font-style: normal; text-align: center; }
-.visual-foot { display: flex; flex-wrap: wrap; gap: 7px; color: #b8c8d5; font-size: .69rem; }
-.visual-foot b { color: var(--lime); }
+.project-image { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 16px 38px rgba(33, 44, 53, .1); }
+.project-image img { width: 100%; object-fit: cover; object-position: top center; }
+.project-image figcaption { padding: 9px 11px; color: var(--muted); border-top: 1px solid var(--line); background: #fff; font-size: .69rem; line-height: 1.45; }
+.realtor-image img { aspect-ratio: 1.2 / 1; }
 
 .jump-card { background: #fffdf8; }
-.forecast-visual { display: grid; grid-template-columns: 1fr; gap: 5px; width: min(100%, 390px); padding: 15px; margin-top: 27px; border: 1px solid #e5dfd2; background: #fff; }
-.forecast-visual span { padding: 7px 9px; color: #5c4d35; border-left: 3px solid var(--orange); background: #fff9f0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 700; }
-.forecast-visual i { height: 12px; color: #a76a43; font-style: normal; line-height: 12px; text-align: center; }
+.jump-image { margin-top: 27px; }
+.jump-image img { aspect-ratio: 1.55 / 1; }
 
 .money-card { background: #f6fafb; }
 .money-visual { display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; gap: 5px; align-items: center; margin-top: 27px; padding: 14px; border: 1px solid #d6e3e6; background: #fff; }
@@ -203,7 +198,7 @@ img { max-width: 100%; display: block; }
   .split-heading { grid-template-columns: 1fr; gap: 20px; }
   .split-heading > p:last-child { max-width: 620px; }
   .featured-content { grid-template-columns: 1fr; gap: 28px; }
-  .realtor-visual { max-width: 540px; }
+  .realtor-image { max-width: 540px; }
   .skills-grid, .quality-grid { gap: 40px; }
   .contact-card { gap: 30px; }
   .contact-actions { flex-direction: row; flex-wrap: wrap; align-items: center; }

@@ -1,14 +1,16 @@
 {{- $style := resources.Get "css/portfolio.css" | minify | fingerprint -}}
 {{- $portrait := resources.Get "media/authors/me.png" -}}
 {{- $chess := resources.Get "media/projects/chess-coach.png" -}}
+{{- $realtor := resources.Get "media/projects/realtor-os-workflows.png" -}}
+{{- $jump := resources.Get "media/projects/jump-cup-brier.png" -}}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Wu Yekai — software engineer building agentic products, decision systems, and data-rich tools.">
+    <meta name="description" content="Wu Yekai — AI data and systems builder working on LLM data, multimodal inspection, agent workflows, and data-rich products.">
     <meta name="theme-color" content="#0b1220">
-    <title>Wu Yekai — Software Engineer</title>
+    <title>Wu Yekai — AI Data &amp; Systems</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   </head>
@@ -17,7 +19,7 @@
 
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="wordmark" href="#top" aria-label="Wu Yekai home">WY<span>·</span>Systems</a>
+        <a class="wordmark" href="#top" aria-label="Wu Yekai home">Wu Yekai<span>·</span>Portfolio</a>
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#case-studies">Case studies</a>
@@ -32,9 +34,9 @@
       <section class="hero section" id="top">
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Wu Yekai · Software engineer · Singapore</p>
-            <h1>Building reliable systems where <em>reasoning</em> meets product.</h1>
-            <p class="hero-summary">I design agentic products, calibrated decision engines, and data-rich tools—from system boundaries and APIs to tested workflows and usable interfaces.</p>
+            <p class="eyebrow">Wu Yekai · AI data &amp; systems · Singapore</p>
+            <h1>I build <em>AI systems</em> people can actually use.</h1>
+            <p class="hero-summary">I am a computer science student and AI data intern working across LLM training data, multimodal inspection, agent workflows, and decision-support products—from the first system boundary to the tested interface.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
               <a class="button button-secondary" href="mailto:wuyekai.sg@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -49,13 +51,13 @@
             {{ with $portrait }}<img class="portrait" src="{{ .RelPermalink }}" width="112" height="112" alt="Wu Yekai">{{ end }}
             <div class="focus-intro">
               <span class="status-dot" aria-hidden="true"></span>
-              <span>Project-led portfolio</span>
+              <span>Current work &amp; research</span>
             </div>
-            <p>I care about the difficult middle: turning a promising model or integration into a system with guardrails, observability, tests, and a clear operator experience.</p>
+            <p>Recent work includes model-curated training data, a gated vision-language inspection pipeline, and agent systems for memory, search, and self-reflection.</p>
             <ul class="focus-list">
-              <li><span>01</span> Agent workflows &amp; tool boundaries</li>
-              <li><span>02</span> Forecasting, routing &amp; quantitative logic</li>
-              <li><span>03</span> Full-stack delivery &amp; operational UX</li>
+              <li><span>01</span> LLM data curation &amp; evaluation</li>
+              <li><span>02</span> Vision-language &amp; geometric verification</li>
+              <li><span>03</span> Agent memory, tools &amp; operator UX</li>
             </ul>
           </aside>
         </div>
@@ -63,9 +65,9 @@
 
       <section class="proof-band" aria-label="Portfolio themes">
         <div class="shell proof-grid">
-          <div><span>01</span><strong>AI systems</strong><p>Versioned workflows, tool calls, LLM orchestration, deterministic fallbacks.</p></div>
-          <div><span>02</span><strong>Decision systems</strong><p>Calibration, backtests, risk gates, market data, and explainable outputs.</p></div>
-          <div><span>03</span><strong>Product systems</strong><p>Interfaces, APIs, persistence, automation, and reproducible developer setup.</p></div>
+          <div><span>01</span><strong>LLM data work</strong><p>Model-scored curation, quality checks, file conversion, and evaluation pipelines.</p></div>
+          <div><span>02</span><strong>Multimodal inspection</strong><p>Gated VLM inference, camera-pose geometry, and visual verification.</p></div>
+          <div><span>03</span><strong>Product systems</strong><p>Agent workflows, interfaces, APIs, automation, and reproducible local setup.</p></div>
         </div>
       </section>
 
@@ -89,13 +91,12 @@
                   <div class="tag-list"><span>Next.js</span><span>Vercel AI SDK</span><span>OpenRouter</span><span>Twilio</span><span>Postgres</span><span>Twenty CRM</span></div>
                   <a class="text-link" href="#case-realtor">Read the case study <span aria-hidden="true">→</span></a>
                 </div>
-                <div class="system-visual realtor-visual" aria-label="Configured workflow architecture">
-                  <div class="visual-label">One workflow definition, multiple runtime targets</div>
-                  <div class="visual-pipeline">
-                    <span>Workflow<br>version</span><i aria-hidden="true">→</i><span>Prompt +<br>tools</span><i aria-hidden="true">→</i><span>WhatsApp<br>or voice</span>
-                  </div>
-                  <div class="visual-foot"><b>Thread pins versions</b><span>•</span> audit + cost events <span>•</span> human takeover</div>
-                </div>
+                {{ with $realtor }}
+                  <figure class="project-image realtor-image">
+                    <img src="{{ .RelPermalink }}" width="1200" height="1227" alt="Realtor OS workflow library showing seller qualification, buyer qualification, and listing enquiry workflows">
+                    <figcaption>Actual workflow configuration screen: versioned prompts, stages, and tools.</figcaption>
+                  </figure>
+                {{ end }}
               </div>
             </article>
 
@@ -103,9 +104,12 @@
               <div class="card-topline"><span class="project-number">02</span><span class="project-state">Forecasting engine</span></div>
               <h3>Jump Cup</h3>
               <p class="project-lede">A multi-model probability engine for World Cup markets, designed around calibration rather than overconfident winner picks.</p>
-              <div class="system-visual forecast-visual" aria-label="Forecasting pipeline">
-                <span>Question</span><i aria-hidden="true">↓</i><span>Parse</span><i aria-hidden="true">↓</i><span>Route + ensemble</span><i aria-hidden="true">↓</i><span>Calibrate + trace</span>
-              </div>
+              {{ with $jump }}
+                <figure class="project-image jump-image">
+                  <img src="{{ .RelPermalink }}" width="1539" height="925" alt="Jump Cup evaluation chart comparing mean crowd Brier score across settled-market question families">
+                  <figcaption>Evaluation report: settled-market fixture grouped by question family.</figcaption>
+                </figure>
+              {{ end }}
               <div class="tag-list"><span>Python</span><span>scikit-learn</span><span>OpenRouter</span><span>SQLite</span></div>
               <a class="text-link" href="#case-jump">Read the case study <span aria-hidden="true">→</span></a>
             </article>
@@ -141,8 +145,8 @@
         <div class="shell">
           <div class="section-heading">
             <p class="eyebrow">Case studies</p>
-            <h2>How the systems are engineered.</h2>
-            <p>Each summary separates implemented behavior from intended future work and calls out the validation evidence that exists in the repository.</p>
+            <h2>How the systems are put together.</h2>
+            <p>Notes from the projects themselves: the architecture choices, the parts that were validated, and the limits worth knowing before making a claim.</p>
           </div>
 
           <article class="case-study" id="case-realtor">
@@ -243,7 +247,7 @@
 
       <section class="section quality-section">
         <div class="shell quality-grid">
-          <div><p class="eyebrow">How I build</p><h2>Evidence over vanity metrics.</h2></div>
+          <div><p class="eyebrow">How I work</p><h2>Build it so it can be inspected, tested, and changed.</h2></div>
           <ul>
             <li><b>Testable boundaries.</b> Risk logic, routing, normalisers, integrations, and application states are separated into units that can be tested with fixtures or deterministic fallbacks.</li>
             <li><b>Inspectable decisions.</b> The forecasting engine exposes its prediction trace; research recommendations preserve facts and risk flags; agent workflows record versioning, tool calls, and audit context.</li>
@@ -254,7 +258,7 @@
 
       <section class="contact-section" id="contact">
         <div class="shell contact-card">
-          <div><p class="eyebrow">Let’s talk</p><h2>Looking for an engineer who can think in systems and ship in detail?</h2><p>Open to software engineering, AI engineering, data, quantitative, and product-focused technical conversations.</p></div>
+          <div><p class="eyebrow">Let’s talk</p><h2>I’m looking for teams where careful engineering and product judgement both matter.</h2><p>Open to software engineering, AI engineering, data, quantitative, and product-focused technical conversations.</p></div>
           <div class="contact-actions">
             <a class="button button-primary" href="mailto:wuyekai.sg@gmail.com">Email Yekai <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="/uploads/resume.pdf" target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a>
