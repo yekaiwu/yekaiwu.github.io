@@ -5,110 +5,22 @@ name:
   display: Wu Yekai
   given: Yekai
   family: Wu
-postnominals: []
-status:
-  icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: AI Researcher
+role: Software Engineer
 email: wuyekai.sg@gmail.com
-bio: |
-  I am actively working with and exploring Vision-Language Models (VLMs), Large Language Models (LLMs), and agentic AI systems, with a particular interest in multimodal reasoning, autonomous decision-making, and system-level integration.
-
-affiliations:
-  - name: Singapore Management University
-    url: 
-
+bio: >-
+  Software engineer building agentic products, decision systems, and data-rich tools.
 links:
-  - icon: at-symbol
-    url: mailto:wuyekai.sg@gmail.com
-    label: E-mail Me
   - icon: brands/github
-    url: https://github.com/wuyekai
+    url: https://github.com/yekaiwu
+    label: GitHub
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/yekaiwu/
-  - icon: brands/x
-    url: https://x.com/wuyekai
-
+    label: LinkedIn
+  - icon: at-symbol
+    url: mailto:wuyekai.sg@gmail.com
+    label: Email
 interests:
-  - AI Research
-  - Vision-Language Models
-  - Large Language Models
-  - Agentic AI
-  - Multimodal Reasoning
-  - Autonomous Decision-Making
-  - System-Level Integration
-
-education:
-  - degree: B.S. Computer Science
-    institution: Singapore Management University
-    start: 2023-08-01
-    end: 2027-05-31
-    summary: |
-      Focus on software engineering and distributed systems.
-    button:
-      text: View Project
-      url: https://github.com/alexjohnson/senior-project
-      icon: brands/github
-
-experience:
-  - role: Agent Development Intern
-    org: Wrtn Technologies, Seoul - South Korea
-    start: 2025-05-01
-    end: 2025-08-31
-    summary: |
-      • Enhanced LLM response by refining retrieval mechanisms and context management for greater accuracy
-      • Created the Memory system, Search system, and Self-reflection system for a B2B Agent Experience tool
-      • Optimized multi-agent collaboration and interaction frameworks to enhance system efficiency and scalability
-  - role: Cross Border Acceleration Intern
-    org: XNode, Shanghai - China
-    start: 2024-05-01
-    end: 2024-08-31
-    summary: |
-      • Conducted desk research on cross-border acceleration programs across China, Singapore, Germany, and the U.A.E
-      • Managed internal databases of startups, founders, and venture capital firms, reducing querying time by 20%
-      • Attended key conferences in Shanghai and Suzhou, managed client relationships, acquisition and outreach efforts
-  - role: Research Intern
-    org: WorldQuant
-    start: 2023-01-01
-    end: 2023-07-01
-    summary: |
-      • Automated identification and analysis of quantitative alpha signals, increasing research efficiency by 40%
-      • Developed robust backtesting frameworks for alphas, improving accuracy, Sharpe ratio, and reducing self-correlation in strategies
-      • Analyzed and labeled proprietary datasets, streamlining data usability and enabling more effective alpha discovery for WorldQuant
-
-skills:
-  - name: Artificial Intelligence
-    items:
-      - label: Agentic AI
-        level: 5
-      - label: Computer Vision
-        level: 5
-      - label: Image Generation
-        level: 5
-      - label: Large Language Models
-        level: 5
-  - name: Development
-    items:
-      - label: TypeScript
-        level: 5
-      - label: React
-        level: 5
-      - label: Node.js
-        level: 5
-      - label: Python
-        level: 5
-  - name: DevOps
-    items:
-      - label: Docker
-        level: 5
-      - label: AWS
-        level: 5
-      - label: CI/CD
-        level: 5
-
-languages:
-  - name: English
-    level: 5
-    label: Native
-  - name: Chinese
-    level: 5
-    label: Fluent
+  - Agentic systems
+  - Decision systems
+  - Data products
+  - Quantitative engineering
