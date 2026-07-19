@@ -3,6 +3,7 @@
 {{- $chess := resources.Get "media/projects/chess-coach.png" -}}
 {{- $realtor := resources.Get "media/projects/realtor-os-workflows.png" -}}
 {{- $jump := resources.Get "media/projects/jump-cup-brier.png" -}}
+{{- $jobapp := resources.Get "media/projects/job-app-dashboard.png" -}}
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +27,6 @@
           <a href="#skills">Capabilities</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="header-cta" href="/uploads/resume.pdf" target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
@@ -44,7 +44,6 @@
             <div class="hero-links" aria-label="Professional links">
               <a href="https://github.com/yekaiwu" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
               <a href="https://www.linkedin.com/in/yekaiwu/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-              <a href="/uploads/resume.pdf" target="_blank" rel="noreferrer">Download résumé <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <aside class="hero-panel" aria-label="Engineering focus">
@@ -114,19 +113,8 @@
               <a class="text-link" href="#case-jump">Read the case study <span aria-hidden="true">→</span></a>
             </article>
 
-            <article class="featured-card money-card">
-              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Quant decision support</span></div>
-              <h3>Money Money</h3>
-              <p class="project-lede">A personal research and portfolio platform that turns multiple strategy signals into explained, risk-aware actions.</p>
-              <div class="system-visual money-visual" aria-label="Investment decision flow">
-                <div><b>Strategies</b><span>facts + flags</span></div><i aria-hidden="true">→</i><div><b>Portfolio</b><span>aggregate</span></div><i aria-hidden="true">→</i><div><b>Risk</b><span>regime + sizing</span></div>
-              </div>
-              <div class="tag-list"><span>Python</span><span>FastAPI</span><span>pandas</span><span>HTMX</span></div>
-              <a class="text-link" href="#case-money">Read the case study <span aria-hidden="true">→</span></a>
-            </article>
-
             <article class="featured-card chess-card">
-              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Full-stack AI application</span></div>
+              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Full-stack AI application</span></div>
               <div class="chess-layout">
                 <div>
                   <h3>Chess Coach</h3>
@@ -136,6 +124,35 @@
                 </div>
                 {{ with $chess }}<img class="chess-image" src="{{ .RelPermalink }}" width="2078" height="1502" alt="Chess Coach analysis interface with game board and evaluation panel">{{ end }}
               </div>
+            </article>
+
+            <article class="featured-card">
+              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Multimodal routing engine</span></div>
+              <h3>MRT + Bus Router</h3>
+              <p class="project-lede">"Leave now" Singapore transit routing over a custom bounded multi-modal search — live LTA bus arrivals, GTFS rail topology, and OneMap walking data — with zero third-party runtime dependencies. Benchmarked against the Google Maps Routes API on 100 checkpointed cases.</p>
+              <div class="tag-list"><span>Python (stdlib)</span></div>
+              <a class="text-link" href="#case-mrt">Read the case study <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="featured-card jump-card">
+              <div class="card-topline"><span class="project-number">05</span><span class="project-state">Slot-release race automation</span></div>
+              <h3>NUS Tennis Booker</h3>
+              <p class="project-lede">Playwright automation that races a university tennis-court booking portal the instant slots release, then hands the payment step to a human over Telegram. Pre-warms an authenticated session ahead of the release window, polls the slot grid every 200ms once it opens, and runs a separate scheduled health check that alerts over Telegram if the site breaks.</p>
+              <div class="tag-list"><span>Python</span><span>Playwright</span><span>APScheduler</span><span>FastAPI</span></div>
+              <a class="text-link" href="https://github.com/yekaiwu/nus_tennis" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="featured-card jump-card">
+              <div class="card-topline"><span class="project-number">06</span><span class="project-state">Autonomous · Phase 3</span></div>
+              <h3>Job Application Assistant</h3>
+              <p class="project-lede">An autonomous job-search pipeline that discovers roles from public ATS boards, filters for relevance and eligibility, tailors resume bullets per role via an LLM, and fills applications through a Playwright session. Every field routes to known, LLM-inferable, or personal-unknown, so it never guesses a personal fact.</p>
+              {{ with $jobapp }}
+                <figure class="project-image job-image">
+                  <img src="{{ .RelPermalink }}" width="1600" height="850" alt="Job Application Assistant dashboard showing the Jobs tab with discovered roles, sources, and application status">
+                  <figcaption>Jobs tab: discovered roles routed to ready, submitted, or blocked.</figcaption>
+                </figure>
+              {{ end }}
+              <div class="tag-list"><span>FastAPI</span><span>SQLModel</span><span>Playwright</span><span>React</span></div>
             </article>
           </div>
         </div>
@@ -176,21 +193,8 @@
             </div>
           </article>
 
-          <article class="case-study" id="case-money">
-            <div class="case-index">03</div>
-            <div class="case-main">
-              <div class="case-header"><p class="eyebrow">Money Money · research-to-action loop</p><h3>Keep the decision logic deterministic; use language models to explain it.</h3></div>
-              <div class="case-columns">
-                <div><h4>Context</h4><p>A small, SGD-based retail portfolio needs multi-market research, position-aware recommendations, monitoring, and a way to understand why a decision changed.</p></div>
-                <div><h4>Decision architecture</h4><p>Strategies emit scores, structured rationale facts, and risk flags. The portfolio layer aggregates agreement, reconciles holdings and cash, then applies regime, correlation, volatility, and stop rules before producing an action.</p></div>
-                <div><h4>Product judgment</h4><p>The optional Gemini/LiteLLM layer renders plain-English explanations from facts already produced by the deterministic pipeline. Data is stored incrementally, and backtests are explicitly described as sanity checks rather than point-in-time proof.</p></div>
-              </div>
-              <div class="case-evidence"><strong>Evidence in the repository</strong><span>Strategy, portfolio, monitoring, risk, target-price, efficacy, and dashboard tests; FastAPI/Jinja/HTMX local interface; launchd scheduling and Telegram alert hooks.</span></div>
-            </div>
-          </article>
-
           <article class="case-study" id="case-mrt">
-            <div class="case-index">04</div>
+            <div class="case-index">03</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">MRT + Bus Router · multimodal optimisation</p><h3>Route “leave now” journeys while treating live data, schedule data, and API quotas differently.</h3></div>
               <div class="case-columns">
@@ -203,7 +207,7 @@
           </article>
 
           <article class="case-study" id="case-chess">
-            <div class="case-index">05</div>
+            <div class="case-index">04</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">Chess Coach · engine-to-language interface</p><h3>Pair deterministic analysis with adaptive, context-aware explanation.</h3></div>
               <div class="case-columns">
@@ -224,11 +228,7 @@
           </div>
           <div class="other-grid">
             <article><span>Quant research</span><h3>WC26 Edge</h3><p>Market-first football decision support with de-vigging, Dixon-Coles pricing, CLV, and capped quarter-Kelly recommendations.</p><span class="quiet-link">Source link pending public availability</span></article>
-            <article id="job-app"><span>In progress · Phase 3</span><h3>Job Application Assistant</h3><p>Factual resume-bullet tailoring, public-ATS discovery connectors, PDF generation, and a cautious application-field router.</p><span class="quiet-link">Repository link to confirm</span></article>
             <article><span>Full-stack product</span><h3>Bojio / Food Buddy</h3><p>Phone OTP, row-level security, meal workflows, restaurant parsing, and real-time chat in a mobile-first React app.</p><span class="quiet-link">Source link pending public availability</span></article>
-            <article><span>Browser automation</span><h3>NUS Tennis Booker</h3><p>Scheduled, time-critical Playwright booking with persistent sessions, pre-warmed browsers, health checks, and Telegram payment handoff.</p><span class="quiet-link">Source link pending public availability</span></article>
-            <article><span>Developer workflow</span><h3>Claude When</h3><p>A local TypeScript/Express control panel for daily Claude Code CLI scheduling via node-cron.</p><a href="https://github.com/yekaiwu/claude_when" target="_blank" rel="noreferrer">Repository ↗</a></article>
-            <article><span>Architecture in progress</span><h3>Liquidity</h3><p>A specification-led autonomous trading agent design with deterministic risk states and no LLM trading write tools.</p><span class="quiet-link">Source link pending public availability</span></article>
           </div>
         </div>
       </section>
@@ -261,7 +261,6 @@
           <div><p class="eyebrow">Let’s talk</p><h2>I’m looking for teams where careful engineering and product judgement both matter.</h2><p>Open to software engineering, AI engineering, data, quantitative, and product-focused technical conversations.</p></div>
           <div class="contact-actions">
             <a class="button button-primary" href="mailto:wuyekai.sg@gmail.com">Email Yekai <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary" href="/uploads/resume.pdf" target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="https://www.linkedin.com/in/yekaiwu/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
         </div>

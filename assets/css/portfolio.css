@@ -120,12 +120,8 @@ img { max-width: 100%; display: block; }
 .jump-image { margin-top: 27px; }
 .jump-image img { aspect-ratio: 1.55 / 1; }
 
-.money-card { background: #f6fafb; }
-.money-visual { display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; gap: 5px; align-items: center; margin-top: 27px; padding: 14px; border: 1px solid #d6e3e6; background: #fff; }
-.money-visual div { min-height: 71px; display: flex; flex-direction: column; justify-content: center; padding: 8px; border: 1px solid #d9e5e5; border-radius: 7px; background: #f5fafa; text-align: center; }
-.money-visual b { color: #283b43; font-size: .72rem; }
-.money-visual span { color: #6e7c84; font-size: .65rem; }
-.money-visual i { color: var(--lime-dark); font-style: normal; text-align: center; }
+.job-image { margin-top: 27px; }
+.job-image img { aspect-ratio: 1.88 / 1; }
 
 .chess-card { grid-column: span 2; background: #fff; }
 .chess-layout { display: grid; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.2fr); gap: 34px; align-items: end; }
