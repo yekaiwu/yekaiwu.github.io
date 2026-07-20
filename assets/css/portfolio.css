@@ -175,7 +175,8 @@ img { max-width: 100%; display: block; }
 .contact-card { display: grid; grid-template-columns: minmax(0, 1.2fr) auto; gap: 62px; align-items: center; padding: clamp(34px, 5vw, 68px); border-radius: 20px; color: #edf6f7; background: #112138; box-shadow: var(--shadow); }
 .contact-card .eyebrow { color: var(--lime); }
 .contact-card h2 { max-width: 800px; color: #fff; }
-.contact-card p:not(.eyebrow) { max-width: 650px; margin: 19px 0 0; color: #c2d0da; }
+.contact-card .contact-intro { max-width: 800px; margin: 12px 0 0; color: #fff; font-size: clamp(1.8rem, 3.25vw, 3.35rem); font-weight: 750; letter-spacing: -.04em; line-height: 1.1; }
+.contact-card p:not(.eyebrow):not(.contact-intro) { max-width: 650px; margin: 19px 0 0; color: #c2d0da; }
 .contact-actions { flex-direction: column; align-items: stretch; min-width: 178px; }
 .contact-actions .button { justify-content: center; }
 .contact-actions .button-secondary { color: #edf6f7; border-color: rgba(234, 245, 246, .33); background: transparent; }
