@@ -129,6 +129,12 @@ img { max-width: 100%; display: block; }
 .job-image { margin-top: 27px; }
 .job-image img { aspect-ratio: 1.88 / 1; }
 
+.mrt-image { margin-top: 27px; }
+.mrt-image img { aspect-ratio: 1600 / 889; }
+
+.nus-image { margin-top: 27px; }
+.nus-image img { aspect-ratio: 1600 / 1067; }
+
 .chess-card { grid-column: span 2; background: #fff; }
 .chess-layout { display: grid; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.2fr); gap: 34px; align-items: end; }
 .chess-image { overflow: hidden; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 11px; object-fit: cover; object-position: top center; aspect-ratio: 2078 / 1502; box-shadow: 0 16px 38px rgba(33, 44, 53, .12); }

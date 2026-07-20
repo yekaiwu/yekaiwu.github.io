@@ -4,6 +4,8 @@
 {{- $realtor := resources.Get "media/projects/realtor-os-workflows.png" -}}
 {{- $jump := resources.Get "media/projects/jump-cup-brier.png" -}}
 {{- $jobapp := resources.Get "media/projects/job-app-dashboard.png" -}}
+{{- $mrt := resources.Get "media/projects/mrt-bus-router.jpg" -}}
+{{- $nus := resources.Get "media/projects/nus-tennis-booker.jpg" -}}
 <!doctype html>
 <html lang="en">
   <head>
@@ -113,8 +115,21 @@
               <a class="text-link" href="#case-jump">Read the case study <span aria-hidden="true">→</span></a>
             </article>
 
+            <article class="featured-card jump-card" style="--accent: var(--accent-jobapp);">
+              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Autonomous · Phase 3</span></div>
+              <h3>Job Application Assistant</h3>
+              <p class="project-lede">An autonomous job-search pipeline that discovers roles from public ATS boards, filters for relevance and eligibility, tailors resume bullets per role via an LLM, and fills applications through a Playwright session. Every field routes to known, LLM-inferable, or personal-unknown, so it never guesses a personal fact.</p>
+              {{ with $jobapp }}
+                <figure class="project-image job-image">
+                  <img src="{{ .RelPermalink }}" width="1600" height="850" alt="Job Application Assistant dashboard showing the Jobs tab with discovered roles, sources, and application status">
+                  <figcaption>Jobs tab: discovered roles routed to ready, submitted, or blocked.</figcaption>
+                </figure>
+              {{ end }}
+              <div class="tag-list"><span>FastAPI</span><span>SQLModel</span><span>Playwright</span><span>React</span></div>
+            </article>
+
             <article class="featured-card chess-card" style="--accent: var(--accent-chess);">
-              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Full-stack AI application</span></div>
+              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Full-stack AI application</span></div>
               <div class="chess-layout">
                 <div>
                   <h3>Chess Coach</h3>
@@ -127,32 +142,31 @@
             </article>
 
             <article class="featured-card" style="--accent: var(--accent-mrt);">
-              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Multimodal routing engine</span></div>
+              <div class="card-topline"><span class="project-number">05</span><span class="project-state">Multimodal routing engine</span></div>
               <h3>MRT + Bus Router</h3>
               <p class="project-lede">"Leave now" Singapore transit routing over a custom bounded multi-modal search — live LTA bus arrivals, GTFS rail topology, and OneMap walking data — with zero third-party runtime dependencies. Benchmarked against the Google Maps Routes API on 100 checkpointed cases.</p>
+              {{ with $mrt }}
+                <figure class="project-image mrt-image">
+                  <img src="{{ .RelPermalink }}" width="1600" height="889" alt="Elevated Singapore MRT train rounding a curved viaduct">
+                  <figcaption>Representative photo, not a product screenshot — the router itself runs as a stdlib CLI/API.</figcaption>
+                </figure>
+              {{ end }}
               <div class="tag-list"><span>Python (stdlib)</span></div>
               <a class="text-link" href="#case-mrt">Read the case study <span aria-hidden="true">→</span></a>
             </article>
 
             <article class="featured-card jump-card" style="--accent: var(--accent-nus);">
-              <div class="card-topline"><span class="project-number">05</span><span class="project-state">Personal booking automation</span></div>
+              <div class="card-topline"><span class="project-number">06</span><span class="project-state">Personal booking automation</span></div>
               <h3>NUS Tennis Booker</h3>
               <p class="project-lede">A personal-use Playwright automation that keeps an authenticated session ready for a university tennis-court booking portal, watches for a court to open up, and hands the payment step to a human over Telegram. A separate scheduled health check alerts over Telegram if the site changes.</p>
-              <div class="tag-list"><span>Python</span><span>Playwright</span><span>APScheduler</span><span>FastAPI</span></div>
-              <a class="text-link" href="https://github.com/yekaiwu/nus_tennis" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="featured-card jump-card" style="--accent: var(--accent-jobapp);">
-              <div class="card-topline"><span class="project-number">06</span><span class="project-state">Autonomous · Phase 3</span></div>
-              <h3>Job Application Assistant</h3>
-              <p class="project-lede">An autonomous job-search pipeline that discovers roles from public ATS boards, filters for relevance and eligibility, tailors resume bullets per role via an LLM, and fills applications through a Playwright session. Every field routes to known, LLM-inferable, or personal-unknown, so it never guesses a personal fact.</p>
-              {{ with $jobapp }}
-                <figure class="project-image job-image">
-                  <img src="{{ .RelPermalink }}" width="1600" height="850" alt="Job Application Assistant dashboard showing the Jobs tab with discovered roles, sources, and application status">
-                  <figcaption>Jobs tab: discovered roles routed to ready, submitted, or blocked.</figcaption>
+              {{ with $nus }}
+                <figure class="project-image nus-image">
+                  <img src="{{ .RelPermalink }}" width="1600" height="1067" alt="Net post on a blue and green hard tennis court">
+                  <figcaption>Representative photo, not a product screenshot — the tool runs as backend automation with a Telegram handoff.</figcaption>
                 </figure>
               {{ end }}
-              <div class="tag-list"><span>FastAPI</span><span>SQLModel</span><span>Playwright</span><span>React</span></div>
+              <div class="tag-list"><span>Python</span><span>Playwright</span><span>APScheduler</span><span>FastAPI</span></div>
+              <a class="text-link" href="https://github.com/yekaiwu/nus_tennis" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </div>
