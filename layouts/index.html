@@ -6,6 +6,9 @@
 {{- $jobapp := resources.Get "media/projects/job-app-dashboard.png" -}}
 {{- $mrt := resources.Get "media/projects/mrt-bus-router.jpg" -}}
 {{- $nus := resources.Get "media/projects/nus-tennis-booker.jpg" -}}
+{{- $fraudWork := resources.Get "media/projects/fraud-desk-worklist.png" -}}
+{{- $fraudCase := resources.Get "media/projects/fraud-desk-case.png" -}}
+{{- $gpu := resources.Get "media/projects/gpu-scheduler.png" -}}
 <!doctype html>
 <html lang="en">
   <head>
@@ -83,8 +86,56 @@
           </div>
 
           <div class="featured-grid">
+            <article class="featured-card featured-card-wide" id="fraud-desk" style="--accent: var(--accent-fraud);">
+              <div class="card-topline"><span class="project-number">01</span><span class="project-state">Document review desk</span></div>
+              <div class="featured-content">
+                <div>
+                  <h3>Fraud Desk</h3>
+                  <p class="project-lede">A review desk for KYC, AML, and loan bundles. Cases come back ranked, each flag points at the figure on the page, and the score shows which checks ran and which pages were not reviewed.</p>
+                  <div class="tag-list"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>SQLite</span></div>
+                  <p class="card-links">
+                    <a class="text-link" href="#case-fraud">Read the case study <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="https://github.com/yekaiwu/fraud-desk" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                  </p>
+                </div>
+                {{ with $fraudWork }}
+                  <figure class="project-image fraud-work">
+                    <img src="{{ .RelPermalink }}" width="2160" height="1350" alt="Fraud Desk worklist with cases ranked by risk, the reason each one is there, and how many checks ran">
+                    <figcaption>Worklist: riskiest first, with the reason and how many checks ran. Fictitious demo data.</figcaption>
+                  </figure>
+                {{ end }}
+              </div>
+              {{ with $fraudCase }}
+                <figure class="project-image fraud-case">
+                  <img src="{{ .RelPermalink }}" width="2160" height="1350" alt="A Fraud Desk case with the flagged figures marked on a bank statement and the finding beside them">
+                  <figcaption>A case: the flagged figures marked on the statement, and the finding beside them. Fictitious demo data.</figcaption>
+                </figure>
+              {{ end }}
+            </article>
+
+            <article class="featured-card featured-card-wide" id="gpu-scheduler" style="--accent: var(--accent-gpu);">
+              <div class="card-topline"><span class="project-number">02</span><span class="project-state">Local admission control</span></div>
+              <div class="featured-content">
+                <div>
+                  <h3>gpu-scheduler</h3>
+                  <p class="project-lede">A local admission controller for Apple silicon unified memory. Shells, cron, and coding agents submit one JSON job. It starts only when the reservation and the live footprint both fit, and it is stopped only in the way it said it can be stopped.</p>
+                  <div class="tag-list"><span>Python (stdlib)</span><span>SQLite</span><span>launchd</span></div>
+                  <p class="card-links">
+                    <a class="text-link" href="#case-gpu">Read the case study <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="https://github.com/yekaiwu/gpu-scheduler" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                  </p>
+                </div>
+                {{ with $gpu }}
+                  <figure class="project-image gpu-image">
+                    <img src="{{ .RelPermalink }}" width="2240" height="1096" alt="gpu-scheduler diagram: the CLI, MCP, and gsched exec submit one JSON job, and the daemon admits one heavy slot">
+                    <figcaption>Three doors submit one JSON job. The daemon admits one heavy slot when the memory fits.</figcaption>
+                  </figure>
+                {{ end }}
+              </div>
+            </article>
+
             <article class="featured-card featured-card-wide" id="realtor-os" style="--accent: var(--accent-realtor);">
-              <div class="card-topline"><span class="project-number">01</span><span class="project-state">Configured agent runtime</span></div>
+              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Configured agent runtime</span></div>
               <div class="featured-content">
                 <div>
                   <h3>Realtor OS</h3>
@@ -102,7 +153,7 @@
             </article>
 
             <article class="featured-card jump-card" style="--accent: var(--accent-jump);">
-              <div class="card-topline"><span class="project-number">02</span><span class="project-state">Forecasting engine</span></div>
+              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Forecasting engine</span></div>
               <h3>Jump Cup</h3>
               <p class="project-lede">A multi-model probability engine for World Cup markets, designed around calibration rather than overconfident winner picks.</p>
               {{ with $jump }}
@@ -116,7 +167,7 @@
             </article>
 
             <article class="featured-card jump-card" style="--accent: var(--accent-jobapp);">
-              <div class="card-topline"><span class="project-number">03</span><span class="project-state">Autonomous · Phase 3</span></div>
+              <div class="card-topline"><span class="project-number">05</span><span class="project-state">Autonomous · Phase 3</span></div>
               <h3>Job Application Assistant</h3>
               <p class="project-lede">An autonomous job-search pipeline that discovers roles from public ATS boards, filters for relevance and eligibility, tailors resume bullets per role via an LLM, and fills applications through a Playwright session. Every field routes to known, LLM-inferable, or personal-unknown, so it never guesses a personal fact.</p>
               {{ with $jobapp }}
@@ -129,7 +180,7 @@
             </article>
 
             <article class="featured-card chess-card" style="--accent: var(--accent-chess);">
-              <div class="card-topline"><span class="project-number">04</span><span class="project-state">Full-stack AI application</span></div>
+              <div class="card-topline"><span class="project-number">06</span><span class="project-state">Full-stack AI application</span></div>
               <div class="chess-layout">
                 <div>
                   <h3>Chess Coach</h3>
@@ -142,7 +193,7 @@
             </article>
 
             <article class="featured-card" style="--accent: var(--accent-mrt);">
-              <div class="card-topline"><span class="project-number">05</span><span class="project-state">Multimodal routing engine</span></div>
+              <div class="card-topline"><span class="project-number">07</span><span class="project-state">Multimodal routing engine</span></div>
               <h3>MRT + Bus Router</h3>
               <p class="project-lede">"Leave now" Singapore transit routing over a custom bounded multi-modal search — live LTA bus arrivals, GTFS rail topology, and OneMap walking data — with zero third-party runtime dependencies. Benchmarked against the Google Maps Routes API on 100 checkpointed cases.</p>
               {{ with $mrt }}
@@ -156,7 +207,7 @@
             </article>
 
             <article class="featured-card jump-card" style="--accent: var(--accent-nus);">
-              <div class="card-topline"><span class="project-number">06</span><span class="project-state">Personal booking automation</span></div>
+              <div class="card-topline"><span class="project-number">08</span><span class="project-state">Personal booking automation</span></div>
               <h3>NUS Tennis Booker</h3>
               <p class="project-lede">A personal-use Playwright automation that keeps an authenticated session ready for a university tennis-court booking portal, watches for a court to open up, and hands the payment step to a human over Telegram. A separate scheduled health check alerts over Telegram if the site changes.</p>
               {{ with $nus }}
@@ -180,8 +231,34 @@
             <p>Notes from the projects themselves: the architecture choices, the parts that were validated, and the limits worth knowing before making a claim.</p>
           </div>
 
-          <article class="case-study" id="case-realtor">
+          <article class="case-study" id="case-fraud">
             <div class="case-index">01</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">Fraud Desk · document review</p><h3>Rank the cases that need a person, and show the figure the flag came from.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>KYC, AML, and loan reviews arrive as bundles. An analyst needs the risky cases first, the exact figure on the page, and a record of which checks did not run.</p></div>
+                <div><h4>System design</h4><p>Ingest reads the text layer, then OCR. Classify and extract. Rule checks, forensics, and cross-document checks run next. A score carries its coverage. Four specialist reviewers and a case officer summarise flagged cases. A person records the decision. High-severity dismissals need a second approver, and the audit log is append-only.</p></div>
+                <div><h4>What was measured</h4><p>On fictitious digital PDFs, core tampers were caught on 465 of 465 held-out bundles, and 0 of 33 clean digital bundles were falsely flagged. Scans are weaker: 38 of 40 on one real-OCR seed, and 3 of 75 clean scans were falsely flagged. The repository documents the misses.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Evidence in the repository</strong><span>FastAPI pipeline, Next.js worklist, 69 rule checks and 5 model-based checks across 13 document types, a red-team note, and the evaluation tables. It is a research prototype. Page text is sent to a model when that reader is on. All demo data is fictitious.</span></div>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-gpu">
+            <div class="case-index">02</div>
+            <div class="case-main">
+              <div class="case-header"><p class="eyebrow">gpu-scheduler · admission control</p><h3>Decide when a process may start, and never stop it in a way it did not allow.</h3></div>
+              <div class="case-columns">
+                <div><h4>Context</h4><p>Apple silicon has one memory pool. RSS hides a loaded model. Two coding agents can each start a server and push the machine into swap, and the OS then kills processes.</p></div>
+                <div><h4>System design</h4><p>A daemon with no model in it. The CLI, an MCP proxy, and <code>gsched exec</code> all submit one JSON job. Admission requires both the reservation and the live sample to fit. One exclusive GPU job. Estimates over two hours wait for the night window. <code>atomic</code> jobs are never signaled once started. The daemon does not signal a process it did not spawn, and SQLite commits before a job is allowed to start.</p></div>
+                <div><h4>Limits</h4><p>Apple silicon only. One user. No sandbox. It does not route a chat completion or evict weights inside a model server. Observe mode changes nothing until enforcement is turned on.</p></div>
+              </div>
+              <div class="case-evidence"><strong>Evidence in the repository</strong><span>Stdlib Python, deterministic tests with a fake clock, and the checkpoint contract: restartable, cooperative, and atomic. A foreign model server stops new GPU admits. That process is not signaled.</span></div>
+            </div>
+          </article>
+
+          <article class="case-study" id="case-realtor">
+            <div class="case-index">03</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">Realtor OS · agentic lead operations</p><h3>Make assistant behavior configurable without making active conversations unpredictable.</h3></div>
               <div class="case-columns">
@@ -195,7 +272,7 @@
           </article>
 
           <article class="case-study" id="case-jump">
-            <div class="case-index">02</div>
+            <div class="case-index">04</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">Jump Cup · calibrated forecasting</p><h3>Forecast probabilities that can be inspected, calibrated, and safely revised.</h3></div>
               <div class="case-columns">
@@ -208,7 +285,7 @@
           </article>
 
           <article class="case-study" id="case-mrt">
-            <div class="case-index">03</div>
+            <div class="case-index">05</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">MRT + Bus Router · multimodal optimisation</p><h3>Route “leave now” journeys while treating live data, schedule data, and API quotas differently.</h3></div>
               <div class="case-columns">
@@ -221,7 +298,7 @@
           </article>
 
           <article class="case-study" id="case-chess">
-            <div class="case-index">04</div>
+            <div class="case-index">06</div>
             <div class="case-main">
               <div class="case-header"><p class="eyebrow">Chess Coach · engine-to-language interface</p><h3>Pair deterministic analysis with adaptive, context-aware explanation.</h3></div>
               <div class="case-columns">
@@ -251,7 +328,7 @@
           <div><p class="eyebrow">How I work</p><h2>Build it so it can be inspected, tested, and changed.</h2></div>
           <ul>
             <li><b>Testable boundaries.</b> Risk logic, routing, normalisers, integrations, and application states are separated into units that can be tested with fixtures or deterministic fallbacks.</li>
-            <li><b>Inspectable decisions.</b> The forecasting engine exposes its prediction trace; research recommendations preserve facts and risk flags; agent workflows record versioning, tool calls, and audit context.</li>
+            <li><b>Inspectable decisions.</b> The forecasting engine exposes its prediction trace; the review desk shows which checks ran and which figure a flag came from; the scheduler gives a reason while a job waits; agent workflows record versioning, tool calls, and audit context.</li>
             <li><b>Honest constraints.</b> The portfolio calls out data gaps, evaluation scope, and status rather than converting partial benchmarks or planned work into claims.</li>
           </ul>
         </div>

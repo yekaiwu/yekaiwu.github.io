@@ -18,6 +18,8 @@
   --accent-mrt: #2563eb;
   --accent-nus: #4d7c0f;
   --accent-jobapp: #6d28d9;
+  --accent-fraud: #1f6b4a;
+  --accent-gpu: #1d4f91;
   --radius: 18px;
   --shadow: 0 20px 50px rgba(21, 34, 53, .08);
 }
@@ -134,6 +136,13 @@ img { max-width: 100%; display: block; }
 
 .nus-image { margin-top: 27px; }
 .nus-image img { aspect-ratio: 1600 / 1067; }
+
+.card-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; }
+.fraud-work img { aspect-ratio: 2160 / 1350; }
+.fraud-case { margin-top: 18px; }
+.fraud-case img { aspect-ratio: 2160 / 1350; object-position: top center; }
+.gpu-image { margin-top: 0; }
+.gpu-image img { aspect-ratio: 2240 / 1096; }
 
 .chess-card { grid-column: span 2; background: #fff; }
 .chess-layout { display: grid; grid-template-columns: minmax(230px, .8fr) minmax(0, 1.2fr); gap: 34px; align-items: end; }
